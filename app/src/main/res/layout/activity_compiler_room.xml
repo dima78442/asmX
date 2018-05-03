@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/etTweetReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="app name"
+        android:imeOptions="actionDone"
+        android:inputType="textCapSentences"
+        android:lines="2"
+        android:maxLength="140"
+        android:paddingBottom="10dp"
+        android:singleLine="false" />
+
+    <Button
+        android:id="@+id/theReviewBarButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:text="Submit Review"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/spinnerSort"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etMessageBox"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:autoLink="all"
+        android:hint=" write assembler code to compile"
+        android:lines="5"
+        android:minLines="1"
+        android:gravity="top|left"
+        android:maxLines="10"
+        android:scrollbars="none"
+        android:inputType="textMultiLine|textCapSentences"/>
+
+</LinearLayout>
