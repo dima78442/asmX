@@ -1,12 +1,6 @@
-package asm;
+package com.dima.asmx.asm;
 import java.util.ArrayList;
 import java.util.Map;
-
-import asm.DATA;
-import asm.ERROR;
-import asm.File_analyze;
-import asm.Lexem;
-import asm.List_table;
 
 public class MOD_BYTE {
     static String createMOD_mov(ArrayList<Lexem> op1, ArrayList<Lexem> op2, int mov_type) {

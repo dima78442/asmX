@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 public class Lexem implements Cloneable{
     Lexem(){
     }

@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ public class Lex_analizator {
     private ArrayList<Lexem> lexems;
     private ArrayList<Lexem> lexems_type;
 
-    Lex_analizator() {
+    public Lex_analizator() {
         File_analyze file_analyze = new File_analyze("/Users/dima/Desktop/Test.asm");
         strings = file_analyze.getStrings();
         Lexem_creator();

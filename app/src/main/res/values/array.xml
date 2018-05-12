@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="planets_array">
-        <item>Listing MASM</item>
-        <item>no Listing</item>
+        <item>from FILE</item>
+        <item>no FILE</item>
     </string-array>
 </resources>

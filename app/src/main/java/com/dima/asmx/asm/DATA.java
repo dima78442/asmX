@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 import java.util.*;
 
 public class DATA {
@@ -10,7 +10,7 @@ public ArrayList<String> data= new ArrayList<String>();
 public String[][] mod = new String[4][7];
 static public Map<String,Integer> offset = new LinkedHashMap<String, Integer>();
 static Deque<Integer> error = new ArrayDeque<Integer>();
-DATA(){
+public DATA(){
     ArrayList<String> arrayList = new ArrayList<String>();
     STRING_DATA sd = new STRING_DATA();
     for (String s : sd.directices) {

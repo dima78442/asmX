@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;

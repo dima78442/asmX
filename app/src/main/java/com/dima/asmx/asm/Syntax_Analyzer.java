@@ -1,4 +1,6 @@
-package asm;
+package com.dima.asmx.asm;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -9,13 +11,14 @@ public class Syntax_Analyzer {
     private ArrayList<Sentence> Sentences2 = new ArrayList<Sentence>();
     private ArrayList<ArrayList<Lexem>> Sentences;
 
-    Syntax_Analyzer(Lex_analizator lex_analizator) throws Exception {
+    public Syntax_Analyzer(Lex_analizator lex_analizator) throws Exception {
         //System.out.println("1");
         lexems = lex_analizator.getLexems_type();
         Sentences2 = SentenceBuilder(lexems);
         strings = lex_analizator.getStrings();
         File_analyze file_analyze = new File_analyze("/Users/dima/Desktop/Test.asm");
         file_analyze.createListing(Sentences2);
+        Log.d("DOD","syntax");
     }
 
     public void show() {
@@ -138,26 +141,30 @@ public class Syntax_Analyzer {
         int i = 1;
         // int j = _lexems.size();
 
-        buf.add(lexems.get(0));
-        // System.out.println(" ");
-        while (i != _lexems.size()) {
+        try {
+            buf.add(lexems.get(0));
+            // System.out.println(" ");
+            while (i != _lexems.size()) {
 
-            if (_lexems.get(i).x == _lexems.get(i - 1).x) {
-                buf.add(_lexems.get(i).clone());
+                if (_lexems.get(i).x == _lexems.get(i - 1).x) {
+                    buf.add(_lexems.get(i).clone());
 
-            } else {
-                for (int k = 0; k < buf.size(); k++) {
-                    // System.out.print(buf.get(k).text.toString() + " " + buf.get(k).x );
+                } else {
+                    for (int k = 0; k < buf.size(); k++) {
+                        // System.out.print(buf.get(k).text.toString() + " " + buf.get(k).x );
 
+                    }
+                    lexem_sentences.add(buf);
+
+                    buf = new ArrayList<Lexem>();
+                    buf.add(_lexems.get(i).clone());
                 }
-                lexem_sentences.add(buf);
-
-                buf = new ArrayList<Lexem>();
-                buf.add(_lexems.get(i).clone());
+                i++;
             }
-            i++;
+            lexem_sentences.add(buf);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
         }
-        lexem_sentences.add(buf);
         //System.out.println("2");
 
 

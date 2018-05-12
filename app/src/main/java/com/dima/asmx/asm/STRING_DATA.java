@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 public class STRING_DATA {
     static public final String[] atributes = {"directives","commands","registers8","register16"};
     static public final String[] reg16 = {"ax", "cx", "dx", "bx", "sp", "bp", "si", "di" };

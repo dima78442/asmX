@@ -1,4 +1,4 @@
-package asm;
+package com.dima.asmx.asm;
 abstract public class Insight {
     protected class Lexem{
         Lexem(){
